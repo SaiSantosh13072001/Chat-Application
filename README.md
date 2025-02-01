@@ -3,4 +3,4 @@ A real-time chat application built with **HTML**, **CSS**, **JavaScript**, and *
 
 After adding the bluprint and desgin to the chat application.
 
-D:\github\Chat-Application\Image\image.png
+Image/image.png
