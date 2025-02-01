@@ -3,4 +3,4 @@ A real-time chat application built with **HTML**, **CSS**, **JavaScript**, and *
 
 After adding the bluprint and desgin to the chat application.
 
-Image/image.png
+![alt text](<Screenshot 2025-02-01 180059.png>)
