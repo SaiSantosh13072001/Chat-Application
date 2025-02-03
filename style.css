@@ -189,6 +189,21 @@ body {
     background-color: #16a085;
     transform: scale(1.05);
 }
+/*
+#exit-button {
+    padding: 10px 20px;
+    background-color: #ff4d4d;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+#exit-button:hover {
+    background-color: #cc0000;
+}*/
 
 /* Username Modal */
 .modal {

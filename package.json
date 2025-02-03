@@ -11,6 +11,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "chat-application": "file:",
     "ws": "^8.18.0"
   }
 }
