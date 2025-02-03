@@ -9,6 +9,7 @@ const createRoomButton = document.getElementById('create-room');
 const messagesDiv = document.getElementById('messages');
 const messageInput = document.getElementById('message-input');
 const sendButton = document.getElementById('send-button');
+// const exitButton = document.getElementById('exit-button');
 
 let username = '';
 let currentRoom = '';
@@ -41,6 +42,15 @@ sendButton.addEventListener('click', () => {
     }
 });
 
+// Exit room
+// exitButton.addEventListener('click', () => {
+//     if (currentRoom) {
+//         socket.send(JSON.stringify({ type: 'leaveRoom', room: currentRoom, username }));
+//         currentRoom = ''; // Reset current room
+//         messagesDiv.innerHTML = ''; // Clear messages
+//     }
+// });
+
 // Handle WebSocket messages
 socket.addEventListener('message', (event) => {
     const data = JSON.parse(event.data);
@@ -58,9 +68,13 @@ socket.addEventListener('message', (event) => {
         case 'message':
             displayMessage(data.message, data.timestamp);
             break;
+        case 'userLeft':
+            displayMessage(`${data.username} left the room`, data.timestamp);
+            break;
     }
 });
 
+// Update room list
 function updateRoomList(rooms) {
     roomList.innerHTML = '';
     rooms.forEach((room) => {
@@ -74,6 +88,7 @@ function updateRoomList(rooms) {
     });
 }
 
+// Display messages
 function displayMessage(message, timestamp) {
     const messageElement = document.createElement('div');
     messageElement.classList.add('message');
